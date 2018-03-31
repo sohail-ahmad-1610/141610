@@ -71,6 +71,14 @@
             <classpath refid="SimpleCalculator.classpath"/>
         </junit>
     </target>
+              	<target name="Fake">
+              	        <mkdir dir="${junit.output.dir}"/>
+              	        <junit fork="yes" printsummary="withOutAndErr">
+              	            <formatter type="xml"/>
+              	            <test name="com.app.calculatorTesting.FakeTestCase" todir="${junit.output.dir}"/>
+              	            <classpath refid="SimpleCalculator.classpath"/>
+              	        </junit>
+              	    </target>
     <target name="TestRunner">
         <java classname="com.app.calculatorTesting.TestRunner" failonerror="true" fork="yes">
             <classpath refid="SimpleCalculator.classpath"/>
